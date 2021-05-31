@@ -57,7 +57,7 @@ padding-left:3em;
     z-index:-1;
 
 }
-.mob, .mob-nav{
+.mob, .mob-nav, .mob-login{
  display:none;
 }
 
@@ -117,5 +117,8 @@ hr{
 .logs, hr{
     width:80%;
     margin:auto;
+}
+.logs{
+    display:none;
 }
 }
