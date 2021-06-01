@@ -40,35 +40,40 @@ li, .login{
 padding-left:3em;
 }
 
- .elements, .menu{
+ .elements, .menu,.devices{
     position:absolute;
 }
 .elements{
-    width:40%;
+    width:35%;
     height:50%;
     padding:80px 120px 0px 120px;
     border-bottom-left-radius:70px;
     background-color: hsl(207, 33%, 95%);
     top:0;
     right:0;
-    display:flex;
-    justify-content: center;
 }
 .mob, .mob-nav, .mob-login{
  display:none;
 }
+.elements,.menu, .text div{
+    display:flex;
+}
+.elements, .menu{
+    justify-content: center;
+}
 .menu{
    width:85%;
    height:40px;
- display:flex;
- flex-direction:row;
- justify-content: center;
+}
+
+.text div, menu{
+    flex-direction:row;
 }
 .devices{
-    position:relative;
-    top:150px;
-    height:120%;
-    right:-30%;
+
+    top:250px;
+width:60%;
+    right:-15%;
 }
 span{
     background-color: hsl(230, 29%, 20%);
@@ -80,7 +85,7 @@ span{
 span, .subtext{
     letter-spacing: normal;
 }
-h1, p{
+h1, p, button{
     font-family: 'Barlow Condensed', sans-serif;
 }
 p{
@@ -103,7 +108,30 @@ H1{
    font-size:21px;
    padding-top:20px;
 }
+.text div{
+    padding-top:50px;
+    align-items: center;
+}
+button{
+    background-color:hsl(0, 100%, 68%);
+    border:none;
+    color:white;
+    font-weight: 700;
+    font-size:15px;
+    width:200px;
+    height:50px;
+    border-radius:7px;
+    letter-spacing: 2px;
+    margin-right:20px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color:hsl(0, 100%, 78%);
+}
+
 @media screen and (max-width:600px){
+  
 .mob{ 
    right:30px;
 }
@@ -119,13 +147,14 @@ nav{
     padding:40px 30px 30px 30px;
 }
 
-nav img:not(.mob img){
+nav img:not(.mob img, .devices){
     width:9%;
 }
 .elements{
   width:50%;
-    height:60%;
+    height:55%;
     padding:0;
+    z-index:-1;
 }
 .mob-nav, .mob-login, .mob{
     display:block;
@@ -136,6 +165,7 @@ nav img:not(.mob img){
  transform:translate(0, 70%);
  padding:20px 10px 20px 10px;
  box-shadow:5px 10px 20px hsl(231, 7%, 65%);
+ z-index:1;
 }
 .logs li{
     list-style-type:none;
@@ -161,7 +191,45 @@ hr{
     width:80%;
     margin:auto;
 }
+.devices{
+    position:absolute;
+height:auto;
+width:110%;
+right:-15%;
+top:15px;
+}
+.text{
+    width:90%;
+padding:25px 0 0 25px;
+padding-top:80%;
 
+}
+h1{
+    font-size: 2.4em;
+}
+button{
+    width:150px;
+    height:50px;
+    font-size:13px;
+}
+    p {
+        letter-spacing: 2px;
+        color: hsl(231, 7%, 65%);
+        font-size: 14px;
+}
+.mono{
+    letter-spacing: 4.5px;
+    font-size: 16px;
+}
+.bilde{
+    position:absolute;
+    width:100%;
+    height:40%;
+    overflow: hidden;
+}
+.text div{
+    padding-bottom:50px;
+}
 }
 
 @media screen and (min-width:600px) and (max-width:1000px){
@@ -177,7 +245,7 @@ hr{
      .logs, .mob{
          position:absolute;
      }
-     .logs, hr{
+     .logs, hr, .text{
          margin:auto;
      }
      .logs{
@@ -187,6 +255,7 @@ hr{
      transform:translate(0, 70%);
      padding:20px 10px 20px 10px;
      box-shadow:5px 10px 20px hsl(231, 7%, 65%);
+     z-index:1;
     }
     .logs li{
         list-style-type:none;
@@ -208,5 +277,45 @@ hr{
         border: none;
         border-top: 1px solid hsl(231, 7%, 65%);
     }
+    .bilde{
+        position:absolute;
+        width:100%;
+        height:50%;
+        overflow: hidden;
+    }
+    .devices{
+        position:absolute;
+    height:auto;
+    width:110%;
+    right:-15%;
+    top:0px;
 
+    }
+    .text{
+        width:90%;
+    padding:25px 0 0 100px;
+    padding-top:70%;
+    
+    }
+    .elements{
+        height:50%;
+    }
+    .text div{
+        padding-bottom:50px;
+    }
+}
+
+@media screen and (min-width:1000px) and (max-width:1440px){
+    .elements{
+        width:35%;
+        height:40%;
+    }
+    .devices{
+        height:auto;
+        width:70%;
+        right:-20%;
+    }
+    h1{
+        font-size: 3.2em;
+    }
 }
