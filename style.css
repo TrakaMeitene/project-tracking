@@ -44,7 +44,7 @@ padding-left:3em;
     position:absolute;
 }
 .elements{
-    width:45%;
+    width:40%;
     height:50%;
     padding:80px 120px 0px 120px;
     border-bottom-left-radius:70px;
@@ -69,6 +69,39 @@ padding-left:3em;
     top:150px;
     height:120%;
     right:-30%;
+}
+span{
+    background-color: hsl(230, 29%, 20%);
+    padding:5px 8px 5px 8px;
+    border-radius:20px;
+    color:white;
+    font-weight: 700;
+}
+span, .subtext{
+    letter-spacing: normal;
+}
+h1, p{
+    font-family: 'Barlow Condensed', sans-serif;
+}
+p{
+    letter-spacing: 3px;
+    color: hsl(231, 7%, 65%);
+    font-size:18px;
+
+}
+H1{
+    font-size:4em;
+    color:hsl(230, 29%, 20%);
+}
+.text{
+    width:40%;
+   padding-left:120px;
+   padding-top:10%;
+}
+.subtext{
+   color:hsl(230, 11%, 40%);
+   font-size:21px;
+   padding-top:20px;
 }
 @media screen and (max-width:600px){
 .mob{ 
