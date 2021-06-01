@@ -32,26 +32,25 @@ a:hover{
     text-decoration: underline;
 }
 .login{
-    padding-left:3em;
-    position:absolute;
     right:200px;
 }
 .login a, .login{
 color: hsl(231, 7%, 65%);
 }
-li {
+li, .login{
 padding-left:3em;
 }
 .nav{
-    position:absolute;
     right:350px;
+}
+.nav, .elements, .login{
+    position:absolute;
 }
 .elements{
     width:45%;
     height:50%;
     border-bottom-left-radius:70px;
     background-color: hsl(207, 33%, 95%);
-    position:absolute;
     top:0;
     right:0;
     z-index:-1;
@@ -69,7 +68,7 @@ padding-left:3em;
 .mob, .logs{
     position: absolute;
 }
-.nav, .login{
+.nav, .login, .logs{
     display:none;
 
 }
@@ -118,7 +117,52 @@ hr{
     width:80%;
     margin:auto;
 }
-.logs{
-    display:none;
+
 }
+
+@media screen and (min-width:600px) and (max-width:1000px){
+    .mob, .mob-nav, .mob-login{
+        display:block;
+    }
+    .nav, .login, .logs{
+        display:none;
+    }
+    .mob{ 
+        right:120px;
+     }
+     .logs, .mob{
+         position:absolute;
+     }
+     .logs, hr{
+         margin:auto;
+     }
+     .logs{
+         width:60%;
+        height:220px;
+        background-color:white;
+     transform:translate(0, 70%);
+     padding:20px 10px 20px 10px;
+     box-shadow:5px 10px 20px hsl(231, 7%, 65%);
+    }
+    .logs li{
+        list-style-type:none;
+    padding:10px;
+    text-align:center;
+    font-size: 1.7em;
+    color:hsl(230, 29%, 20%);
+    font-family: 'Barlow Condensed', sans-serif;
+    }
+    .mob-login li{
+        padding-top:1em;
+    }
+    .mob-login li a{
+        color:hsl(231, 7%, 65%);
+    }
+    hr{
+        width:80%;
+        height: 0px;
+        border: none;
+        border-top: 1px solid hsl(231, 7%, 65%);
+    }
+
 }
