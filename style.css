@@ -31,33 +31,37 @@ a{
 a:hover{
     text-decoration: underline;
 }
-.login{
-    right:200px;
-}
+
 .login a, .login{
 color: hsl(231, 7%, 65%);
 }
 li, .login{
 padding-left:3em;
 }
-.nav{
-    right:350px;
-}
-.nav, .elements, .login{
+
+ .elements, .menu{
     position:absolute;
 }
 .elements{
     width:45%;
     height:50%;
+    padding:50px 120px 0px 120px;
     border-bottom-left-radius:70px;
     background-color: hsl(207, 33%, 95%);
     top:0;
     right:0;
-    z-index:-1;
-
+    display:flex;
+    justify-content: center;
 }
 .mob, .mob-nav, .mob-login{
  display:none;
+}
+.menu{
+   width:85%;
+   height:40px;
+ display:flex;
+ flex-direction:row;
+ justify-content: center;
 }
 
 @media screen and (max-width:600px){
@@ -68,7 +72,7 @@ padding-left:3em;
 .mob, .logs{
     position: absolute;
 }
-.nav, .login, .logs{
+.nav, .login, .logs, .menu{
     display:none;
 
 }
@@ -80,8 +84,9 @@ nav img:not(.mob img){
     width:9%;
 }
 .elements{
-    width:50%;
+  width:50%;
     height:60%;
+    padding:0;
 }
 .mob-nav, .mob-login, .mob{
     display:block;
